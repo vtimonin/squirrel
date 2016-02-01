@@ -13,4 +13,4 @@ set(sqstdlib_SOURCE_FILES
 )
 
 add_library(sqstdlib ${sqstdlib_SOURCE_FILES})
-target_include_directories(sqstdlib PRIVATE ${sqstdlib_SOURCE_DIR} ${squirrel_lang_SOURCE_DIR}/include )
+target_include_directories(sqstdlib PRIVATE ${sqstdlib_SOURCE_DIR} ${sqstdlib_SOURCE_DIR}/../include )

@@ -6,5 +6,5 @@ set(squirrel_SOURCE_FILES
         )
 
 add_executable(sq ${squirrel_SOURCE_FILES})
-target_include_directories(sq PRIVATE ${sq_SOURCE_DIR} ${squirrel_lang_SOURCE_DIR}/include)
+target_include_directories(sq PRIVATE ${sq_SOURCE_DIR} ${sq_SOURCE_DIR}/../include)
 target_link_libraries(sq squirrel sqstdlib)

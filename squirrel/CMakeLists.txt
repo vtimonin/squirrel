@@ -17,4 +17,4 @@ set(squirrel_SOURCE_FILES
 )
 
 add_library(squirrel ${squirrel_SOURCE_FILES})
-target_include_directories(squirrel PRIVATE ${squirrel_SOURCE_DIR} ${squirrel_lang_SOURCE_DIR}/include )
+target_include_directories(squirrel PRIVATE ${squirrel_SOURCE_DIR} ${squirrel_SOURCE_DIR}/../include )
