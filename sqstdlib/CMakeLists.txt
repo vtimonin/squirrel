@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.0)
 project(sqstdlib)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+
 set(INCLUDE_FILES
         ../include/sqstdsystem.h
         ../include/sqstdstring.h
@@ -23,4 +25,5 @@ set(SOURCE_FILES
 )
 
 add_library(sqstdlib ${SOURCE_FILES} ${INCLUDE_FILES})
-target_include_directories(sqstdlib PUBLIC . ../include )
+target_include_directories(sqstdlib PUBLIC . ../include)
+target_link_libraries(sqstdlib squirrel)
