@@ -1,7 +1,20 @@
-cmake_minimum_required(VERSION 3.4)
+cmake_minimum_required(VERSION 3.0)
 project(squirrel)
 
-set(squirrel_SOURCE_FILES
+set(INCLUDE_FILES
+        ../include/sqconfig.h
+        ../include/squirrel.h
+        sqarray.h
+        sqclosure.h
+        sqfuncproto.h
+        sqopcodes.h
+        sqpcheader.h
+        sqstring.h
+        squserdata.h
+        squtils.h
+        )
+
+set(SOURCE_FILES
         sqapi.cpp
         sqbaselib.cpp
         sqfuncstate.cpp
@@ -16,5 +29,5 @@ set(squirrel_SOURCE_FILES
         sqclass.cpp
 )
 
-add_library(squirrel ${squirrel_SOURCE_FILES})
-target_include_directories(squirrel PRIVATE ${squirrel_SOURCE_DIR} ${squirrel_SOURCE_DIR}/../include )
+add_library(squirrel ${SOURCE_FILES} ${INCLUDE_FILES})
+target_include_directories(squirrel PUBLIC . ../include)

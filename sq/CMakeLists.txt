@@ -1,10 +1,9 @@
-cmake_minimum_required(VERSION 3.4)
+cmake_minimum_required(VERSION 3.0)
 project(sq)
 
-set(squirrel_SOURCE_FILES
+set(SOURCE_FILES
         sq.c
         )
 
-add_executable(sq ${squirrel_SOURCE_FILES})
-target_include_directories(sq PRIVATE ${sq_SOURCE_DIR} ${sq_SOURCE_DIR}/../include)
+add_executable(sq ${SOURCE_FILES})
 target_link_libraries(sq squirrel sqstdlib)
